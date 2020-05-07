@@ -1,0 +1,140 @@
+footer {
+  background-color: #181c27;
+  background: url('../images/stars-des.png') no-repeat top center;
+  //   background-image: url(../images/footer-img.png);
+  background-size: cover;
+  
+  .team--wrp {
+    background: url('../images/team-mob.png') no-repeat center center;
+    background-size: cover;
+    // width: 100%;
+    // height: 480px;
+    
+
+    .footer--wrp {
+      padding-top: 62px;
+      width: 260px;
+      margin: auto;
+
+      .request--wrp {
+        margin-bottom: 280px;
+        text-align: center;
+
+        .request {
+          @include acrom(bold, 20px, $txt-akcent-l);
+          text-transform: uppercase;
+        }
+      }
+
+      .footer-description {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+        align-items: center;
+      }
+
+      .footer-logo--wrp {
+        margin-bottom: 14px;
+      }
+
+      p {
+        @include acrom(normal, 12px, $txt-white);
+      }
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  footer {
+    background-image: url('../images/stars-des@2x.png');
+  }
+  
+  .team--wrp {
+    background-image: url('../images/team-mob@2x.png');
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    // background-image: url('../images/star-tab.png');
+
+    .team--wrp {
+      background-image: url('../images/team-tab.png');
+
+      .footer--wrp {
+        padding-top: 92px;
+        width: 620px;
+
+        .request--wrp {
+          margin-bottom: 285px;
+
+          .request {
+            font-size: 30px;
+          }
+        }
+
+        .footer-logo--wrp {
+          margin-bottom: 0;
+        }
+
+        .footer-description {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding-bottom: 19px;
+          margin-bottom: 0;
+
+          p {
+            padding-left: 13px;
+            font-size: 18px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .team--wrp {
+    background-image: url('../images/team-tab@2x.png');
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    // background-image: url('../images/star-tab.png');
+
+    .team--wrp {
+      background-image: url('../images/team-des.png');
+
+      .footer--wrp {
+        padding: 0 15px;
+        padding-top: 262px;
+        width: 1140px;
+
+        .request--wrp {
+          margin-bottom: 638px;
+
+          .request {
+            font-size: 60px;
+          }
+        }
+
+        .footer-description {
+          padding-bottom: 67px;
+
+          p {
+            padding-left: 30px;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .team--wrp {
+    background-image: url('../images/team-des@2x.png');
+  }
+}

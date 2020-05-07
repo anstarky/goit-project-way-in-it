@@ -1,0 +1,291 @@
+.header--wrp {
+  background-color: #181c27;
+  background-image: url(../images/header_bg.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+header {
+  padding: 26px 0;
+  margin: auto;
+  width: 260px;
+}
+
+.header-box {
+  &__line-1 {
+    @include acrom(normal, 14px, $txt-white);
+    letter-spacing: -1px;
+    line-height: 1.286;
+  }
+
+  &__line-2 {
+    @include acrom(bold, 20px, $txt-akcent-l);
+    letter-spacing: -0.8px;
+    line-height: 1.3;
+  }
+  
+  &__line-3 {
+    @include acrom(500, 14px, $txt-white);
+    line-height: 18px;
+  }
+
+  &__line-4 {
+    @include acrom(bold, 20px, $txt-akcent-d);
+    line-height: 1.2;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.form-box {
+  text-align: center;
+}
+
+form {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 12px;
+  box-shadow: 0 12px 70px rgba(121, 139, 188, 0.48);
+
+  .title {
+    @include acrom(800, 16px, $txt-black);
+    margin-top: 0;
+    text-align: left;
+    line-height: 20px;
+  }
+
+  .subtitle {
+    @include acrom(normal, 13px, $txt-black);
+    text-align: left;
+    line-height: 18px;
+  }
+
+  input {
+    box-sizing: border-box;
+    display: block;
+    width: 220px;
+    height: 40px;
+    border: 1px solid #525252;
+    margin-bottom: 12px;
+    padding: 15px;
+
+    &::placeholder {
+      @include acrom(500, 14px, #a2a2a2);
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    &:focus &:invalid {
+      outline: 2px solid green;
+      transition: outline-color 0.4s;
+    }
+
+    &:valid {
+      transition: outline-color 0.4s;
+      outline: 2px solid $btn-color;
+    }
+  }
+
+  button {
+    width: 220px;
+    height: 40px;
+    box-shadow: 0 2px 10px rgba(255, 107, 8, 0.59);
+    background-color: $btn-color;
+    border: none;
+    @include acrom(bold, 16px, $txt-white);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background-color: hsl(24, 100%, 45%);
+    }
+  }
+}
+
+.privacy {
+  text-align: center;
+
+  &__link {
+    text-decoration: none;
+    @include acrom(normal, 13px, #5d6066);
+  }
+}
+
+@media (min-width: 768px) {
+  .header--wrp {
+    background-image: url(../images/headerbgtablet.png);
+  }
+
+  .logo--wrp {
+    margin-bottom: 33px;
+  }
+
+  header {
+    box-sizing: border-box;
+    padding: 40px 64px 48px 64px;
+    width: 748px;
+  }
+.header-box-wrp {
+    width: 620px;
+  }
+  .header-box {
+    width: 620px;
+
+    &__line-1 {
+      width: 512px;
+    }
+
+    &__line-2 {
+      font-size: 40px;
+      width: 545px;
+      margin-bottom: 33px;
+    }
+
+    &__line-3 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__line-4 {
+      font-size: 40px;
+      margin: 20px 0;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
+  form {
+    padding: 34px 77px 41px 77px;
+    width: 100%;
+    text-align: center;
+
+    input {
+      width: 467px;
+
+      &:last-of-type {
+        margin-bottom: 27px;
+      }
+    }
+
+    .title {
+      font-size: 24px;
+      text-align: center;
+      line-height: 28px;
+    }
+
+    .subtitle {
+      margin-bottom: 27px;
+      text-align: center;
+    }
+
+    button {
+      width: 467px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header--wrp {
+    background-image: url(../images/header_desbg.png);
+    background-position: center center;
+  }
+  
+  .logo--wrp {
+    margin-bottom: 72px;
+  }
+
+  header {
+    width: 1170px;
+    padding: 37px 15px 100px 15px;
+  }
+
+  .header-box--wrp {
+    align-items: flex-start;
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .header-box {
+    &__line-1 {
+      margin-top: 0;
+      font-size: 20px;
+      width: 637px;
+    }
+
+    &__line-2 {
+      font-size: 58px;
+      width: 631px;
+      letter-spacing: -2.4px;
+    }
+
+    &__line-3 {
+      width: 611px;
+      font-size: 35px;
+      letter-spacing: -0.32px;
+      line-height: 1.2;
+    }
+
+    &__line-4 {
+      width: 628px;
+      font-size: 55px;
+      letter-spacing: -2.2px;
+      margin-top: 0;
+
+      span {
+        font-size: 29px;
+        letter-spacing: -1.17px;
+      }
+    }
+  }
+  
+  .form-box {
+    flex-basis: 460px;
+  
+    position: relative;
+    left: 36px;
+  }
+
+  form {
+    width: 460px;
+    padding: 43px 24px 50px 35px;
+    text-align: left;
+    margin-bottom: 18px;
+
+    input {
+      width: 389px;
+      height: 60px;
+      font-size: 18px;
+      margin-bottom: 36px;
+    }
+
+    button {
+      width: 389px;
+      height: 60px;
+      font-size: 22px;
+    }
+
+    .title {
+      font-size: 35px;
+      line-height: 1.2;
+      letter-spacing: -0.22px;
+      text-align: left;
+    }
+
+    .subtitle {
+      line-height: 28px;
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+
+  .privacy__link {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,80 @@
+.question {
+  width: 260px;
+  margin: auto;
+  padding-top: 34px;
+
+  h2 {
+    @include acrom(800, 20px, $txt-black);
+    margin-top: 0;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: -1.4px;
+    padding-bottom: 0;
+  }
+
+  &__list {
+    list-style: none;
+    list-style-image: url('../images/arrow.png');
+    margin-bottom: 35px;
+    padding-left: 25px;
+    text-align: left;
+  }
+}
+  .list__item {
+    @include acrom(400, 14px, $txt-black);
+    line-height: 1.5;
+
+    p {
+      margin-left: 10px;
+    }
+  }
+
+
+@media (min-width: 768px) {
+  .question {
+    width: 620px;
+    padding-top: 54px;
+
+    h2 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    &__list {
+      margin-bottom: 55px;
+    }
+
+    .list__item {
+      font-size: 16px;
+
+      &:first-of-type {
+        width: 394px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .question {
+    padding: 132px 15px 0 15px;
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      width: 490px;
+      font-size: 48px;
+      line-height: 60px;
+      letter-spacing: -1.92px;
+    }
+
+    &__list {
+      margin-top: 0;
+      width: 487px;
+    }
+
+    .list__item {
+      font-size: 18px;
+    }
+  }
+}

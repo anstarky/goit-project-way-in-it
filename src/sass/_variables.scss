@@ -1,0 +1,42 @@
+$txt-title: #1b202a;
+$txt-akcent-l: #00eaff;
+$txt-akcent-d: #f4ad29;
+$btn-color: #ff702a;
+$txt-black: #222;
+$txt-white: #fff;
+
+@mixin acrom($weight, $size, $color) {
+  font-family: 'acrom', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+@mixin monts($size, $color) {
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+  font-size: $size;
+  color: $color;
+}
+
+h2 {
+  @include acrom(bold, 20px, $txt-black);
+  // width: 225px;
+  font-size: 20px;
+  text-align: center;
+  // margin: auto;
+  // padding-bottom: 25px;
+}
+@media (min-width: 768px) {
+  h2 {
+    // width: 580px;
+    @include acrom(800, 30px, $txt-black);
+    // padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+}

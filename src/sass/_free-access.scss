@@ -1,0 +1,161 @@
+.access-container--fluid {
+  width: 100%;
+  background-color: #edf0f2;
+}
+
+.access-container {
+  padding-top: 34px;
+  width: 320px;
+  margin: auto;
+  min-height: 1094px;
+}
+
+.access-subtitle {
+  @include acrom(800, 20px, $txt-black);
+  width: 225px;
+  line-height: 1.5;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 12px;
+  letter-spacing: -0.8px;
+}
+
+.access-cards{
+  padding-top: 20px;
+}
+
+.access-card {
+  position: relative;
+  margin: auto;
+  width: 225px;
+  height: 230px;
+  background-color: $txt-white;
+  box-shadow: -19px 16px 0 0 #e6e9eb;
+  margin-bottom: 45px;
+}
+
+.access-card::before {
+  content: '';
+  border: 1px solid $txt-akcent-l;
+  width: 60px;
+  display: block;
+  position: absolute;
+  left: -14px;
+  top: 24px;
+  z-index: 1;
+}
+
+.access-card__number {
+  @include monts(50px, #f8f9f8);
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: -37px;
+  height: 37px;
+  overflow: hidden;
+}
+
+.access-card__description {
+  margin: 0;
+  @include acrom(400, 16px, $txt-black);
+  padding: 40px 30px;
+  letter-spacing: -0.2px;
+  line-height: 22px;
+}
+
+.access-button {
+  @include acrom(800, 14px, $txt-white);
+  text-transform: uppercase;
+  line-height: 20px;
+  margin: auto;
+  width: 224px;
+  height: 106px;
+  box-shadow: 0 2px 10px rgba(255, 107, 8, 0.59);
+  background-color: $btn-color;
+  display: block;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: hsl(24, 100%, 45%);
+  }
+}
+
+@media (min-width: 768px) {
+  .access-container {
+    padding-top: 50px;
+    width: 748px;
+    min-height: 548px;
+  }
+  .access-subtitle {
+    @include acrom(800, 30px, $txt-black);
+    line-height: 40px;
+    width: 580px;
+    padding-bottom: 50px;
+  }
+  .access-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .access-card__number {
+    @include monts(70px, #f8f9f8);
+    right: 0;
+    top: -50px;
+    height: 50px;
+    overflow: hidden;
+  }
+  .access-button {
+    text-transform: none;
+    width: 532px;
+    height: 70px;
+    @include acrom(800, 18px, $txt-white);
+  }
+}
+
+@media (min-width: 1200px) {
+  .access-container {
+    padding-top: 100px;
+    width: 1140px;
+    min-height: 856px;
+  }
+  .access-subtitle {
+    width: 1070px;
+    @include acrom(800, 48px, $txt-black);
+    padding-bottom: 100px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+  }
+  .access-cards {
+    padding-bottom: 78px;
+  }
+  .access-card {
+    width: 350px;
+    height: 276px;
+  }
+  .access-card::before {
+    content: '';
+    border: 1px solid $txt-akcent-l;
+    width: 60px;
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 44px;
+    z-index: 1;
+  }
+  .access-card__description {
+    @include acrom(regular, 18px, $txt-black);
+    padding: 70px 30px;
+    line-height: 35px;
+    letter-spacing: -1px;
+  }
+  .access-card__number {
+    @include monts(150px, #f8f9f8);
+    top: -105px;
+    height: 105px;
+  }
+  .access-button {
+    width: 810px;
+    height: 108px;
+    @include acrom(800, 25px, $txt-white);
+  }
+}
